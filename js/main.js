@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ===================== */
 
   const RECAPTCHA_SITE_KEY = "6LfyX4csAAAAALmGDaVMruds2PMxaLfg7itK7Gn9";
-  const WHATSAPP_NUMBER = "+56997968580"; // <-- Cambia por el número real
+  const WHATSAPP_NUMBER = "56973860069"; // formato wa.me: solo dígitos con código de país, sin "+"
   const WHATSAPP_MESSAGE = "Hola, me gustaría obtener más información.";
 
   const wspBtn = document.getElementById("whatsapp-float");
