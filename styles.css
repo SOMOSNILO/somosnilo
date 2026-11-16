@@ -1,0 +1,18 @@
+/*
+  CSS loader
+  - Mantiene index.html intacto (sigue cargando styles.css)
+  - Estilos base en styles.base.css
+  - Overrides por breakpoint en archivos separados
+  - Orden importa: en pantallas pequeñas se cumplen varios max-width
+*/
+
+@import url("styles.base.css");
+
+/* Desktop-first: de mayor a menor para que el último gane */
+ @import url("styles.max-1600.css") screen;
+@import url("styles.max-1400.css") screen;
+@import url("styles.max-1200.css") screen;
+@import url("styles.max-992.css") screen;
+@import url("styles.max-768.css") screen; 
+@import url("styles.max-576.css") screen;
+/* @import url("styles.max-360.css") screen; */

@@ -1,0 +1,175 @@
+/* =========================================
+   Ajuste para pantallas <= 1400px
+   ========================================= */
+@media (max-width:1400px){
+
+.navbar{
+    padding:30px 60px;
+}
+
+.nav-links{
+    gap:25px;
+    margin:0 20px;
+}
+
+.nav-links a{
+    font-size:20px;
+}
+
+.btn-primary,
+.btn-secondary{
+    font-size:17px;
+    padding:12px 26px;
+}
+
+.hero-title{
+    font-size:clamp(2.6rem,3.5vw,3.8rem);
+}
+
+.hero-subtitle{
+    font-size:18px;
+}
+
+.hero-image img{
+    max-width:720px;
+}
+
+.card-chat{
+    top:10px;
+    right:360px;
+}
+
+ .card-ai{
+    position:absolute;
+    top:38.5%;
+    right:27.5%;
+
+    width:clamp(70px,8vw,120px);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:transparent;
+    box-shadow:none;
+}
+
+.floating-channels{
+
+    top:36.5%;
+    right:19.5%;
+
+}
+
+.floating-card {
+    padding: 10px;
+}
+
+.card-team{
+    right:10%;
+    bottom:0;
+    transform: translateY(60px);
+    padding: 8px;
+
+}
+.hero-dot{
+    width:90px;
+    height:90px;
+}
+
+.hero-agent{
+    width:90px;
+    height:120px;
+}
+
+
+/* ===========================
+   Problem Section
+   =========================== */
+
+
+
+.problem-section{
+  
+    text-align:center;
+    background:var(--color-white);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+/* label */
+
+.section-label{
+    display:inline-block;
+    font-size:18px;
+    font-weight:700;
+    color:var(--color-secondary);
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:16px;
+}
+
+/* title */
+
+.section-title{
+    font-size:48px;
+    font-weight:800;
+    color:var(--color-text-dark);
+    margin-bottom:16px;
+    line-height:1.2;
+}
+
+/* description */
+
+.section-description{
+    font-size:20px;
+    line-height:1.6;
+    max-width:900px;
+    margin:0 auto 70px;
+    color:var(--color-text-black);
+}
+
+/* FLEX container */
+
+.stats-grid{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    gap:80px;
+    flex-wrap:nowrap;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+/* item */
+
+.stat-item{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    max-width:280px;
+}
+
+/* icon */
+
+.stat-icon{
+    width:80px;
+    height:80px;
+    margin-bottom:20px;
+}
+
+/* text */
+
+.stat-item p{
+    font-size:18px;
+    font-weight:500;
+    line-height:1.5;
+    color:var(--color-text-black);
+}
+
+
+
+
+}

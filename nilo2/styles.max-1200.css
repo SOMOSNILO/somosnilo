@@ -1,0 +1,105 @@
+@media (max-width: 1200px) {
+    .card-channels {
+        left: 24px;
+        bottom: 24px;
+    }
+
+    .floating-stats {
+        right: 18px;
+        bottom: 18px;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .navbar {
+        padding: 30px 60px;
+    }
+    
+    .nav-links {
+        gap: 20px;
+    }
+    
+    .nav-links a {
+        font-size: 18px;
+    }
+    
+    .hero-content {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        padding: 100px 60px;
+    }
+
+    .card-chat {
+        right: 220px;
+        top: 210px;
+        width: 280px;
+    }
+
+    .card-ai {
+        right: 420px;
+        top: 560px;
+    }
+
+    .floating-channels {
+        right: 300px;
+        top: 552px;
+    }
+
+    .card-team {
+        right: 220px;
+        top: 820px;
+    }
+    
+    .hero-title {
+        font-size: 60px;
+    }
+    
+    .hero-subtitle {
+        font-size: 24px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .solution-section {
+        flex-direction: column !important;
+        padding: 60px 40px;
+    }
+
+    .trust-layout {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .trust-left {
+        min-width: 0;
+    }
+
+    .trust-map {
+        max-width: none;
+    }
+
+    .trust-map img {
+        position: static;
+        width: 100%;
+        height: auto;
+        transform: none;
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-column.newsletter h4 {
+        white-space: normal;
+    }
+}

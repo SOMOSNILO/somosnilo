@@ -1,0 +1,14 @@
+@media (max-width: 1600px) {
+    .hero-image {
+        right: -100px;
+        width: 900px;
+    }
+    
+    .hero-title {
+        font-size: 70px;
+    }
+    
+    .stats-grid {
+        gap: 40px;
+    }
+}

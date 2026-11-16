@@ -1,0 +1,35 @@
+@media (max-width: 480px) {
+    .logo img {
+        width: 180px;
+        height: auto;
+    }
+
+    .nav-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .hero-content {
+        padding: 40px 20px;
+    }
+
+    .section-title,
+    .section-title-left {
+        font-size: 28px;
+    }
+
+    .cta-section h2 {
+        font-size: 32px;
+    }
+}

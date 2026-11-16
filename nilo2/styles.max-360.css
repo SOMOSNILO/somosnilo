@@ -1,0 +1,9 @@
+@media (max-width: 360px) {
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+}

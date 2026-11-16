@@ -1,0 +1,15 @@
+@media (max-width: 992px) {
+    .pricing-section {
+        flex-direction: column;
+        gap: 40px;
+        padding: 60px 40px;
+    }
+
+    .pricing-content {
+        max-width: none;
+    }
+
+    .pricing-content h2 {
+        font-size: 40px;
+    }
+}

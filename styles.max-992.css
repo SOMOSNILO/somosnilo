@@ -1,0 +1,388 @@
+@media (max-width:992px){
+
+
+	/* LOGO */
+
+	.logo{
+		width: 150px;
+		height: auto;
+	}
+/* NAVBAR */
+
+.navbar{
+    padding:25px 40px;
+}
+
+.logo img{
+    height:60px;
+    width:auto;
+}
+
+.nav-links{
+    gap:18px;
+    margin:0 10px;
+}
+
+.nav-links a{
+    font-size:16px;
+}
+
+.nav-actions{
+    gap:15px;
+}
+
+.btn-primary,
+.btn-secondary{
+    font-size:10px;
+    padding:10px 20px;
+}
+
+
+/* HERO */
+
+.hero-section{
+    padding:0 30px;
+		min-height: 60vh;
+}
+
+.hero-content{
+    max-width:500px;
+}
+
+.hero-title{
+    font-size:clamp(2.2rem,3vw,3rem);
+    padding-left:40px;
+}
+
+.hero-subtitle{
+    font-size:16px;
+    padding-left:30px;
+		margin-bottom: 10px;
+}
+
+.hero-buttons{
+    padding-left:15px;
+		padding-bottom: 15px;
+		
+}
+
+
+/* HERO IMAGE */
+
+.hero-image img{
+    max-width:480px;
+}
+
+
+/* FLOATING CARDS */
+
+.card-chat{
+    top:30px;
+    right:250px;
+    width:200px;
+	padding: 16px;
+}
+
+ .card-ai{
+    position:absolute;
+    top:40.5%;
+    right:29.5%;
+}
+
+.floating-channels{
+
+    top:34%;
+    right:21%;
+
+}
+
+.floating-card {
+    padding: 5px;
+}
+
+
+
+.floating-channels-icons{
+    width:90px;
+}
+
+.floating-channels p{
+    font-size:12px;
+}
+
+.card-team{
+    bottom:-10px;
+    /* right:40px; */
+    width:180px;
+}
+
+.card-team p{
+    font-size:14px;
+}
+
+
+/* DECORATIVE */
+
+.hero-dot{
+    width:70px;
+    height:70px;
+}
+
+.hero-agent{
+    width:70px;
+    height:100px;
+}
+
+.agent-icon{
+    width:70px;
+}
+
+/* bubble */
+/* 
+.chat-bubble{
+    padding:12px;
+    border-radius:22px;
+    margin-bottom:8px;
+}
+
+.chat-bubble p{
+    font-size:12px;
+} */
+
+/* input */
+
+.chat-input{
+    padding:8px 45px 8px 10px;
+}
+
+.chat-input::after{
+    width:28px;
+    height:28px;
+    right:8px;
+    background-size:14px 14px;
+}
+
+/* ===========================
+   Problem Section
+   =========================== */
+
+
+.problem-section{
+    padding:90px 60px;
+}
+
+.problem-section .section-title{
+    font-size:34px;
+}
+
+.problem-section .section-description{
+    font-size:17px;
+}
+
+.problem-section .stats-grid{
+    flex-wrap:nowrap;
+    gap:40px;
+}
+
+.problem-section .stat-icon{
+    width:80px;
+}
+
+.problem-section .stat-item p{
+    font-size:16px;
+}
+
+
+/* ===========================
+   Solution Sections
+   =========================== */
+
+
+.solution-intro{
+    padding:70px 40px;
+}
+
+.section-title-left{
+    font-size:36px;
+}
+
+.solution-description{
+    font-size:20px;
+}
+
+.solution-section{
+    gap:30px;
+    padding:60px 40px;
+}
+
+.solution-content h2{
+    font-size:34px;
+}
+
+.solution-content p{
+    font-size:18px;
+}
+
+.solution-image img{
+    max-width:440px;
+}
+
+/* floating */
+
+.solution-chat-card{
+    width:180px;
+}
+
+.solution-channel-icons{
+    width:120px;
+}
+
+.floating-stat-icon{
+    width:36px;
+    height:36px;
+}
+
+
+.product-grid{
+    gap:30px;
+    flex-direction: row;
+}
+
+/* ===========================
+   Trust Section
+   =========================== */
+
+
+/* contenedor */
+
+.trust-section{
+    padding:60px 60px;
+    margin:40px 40px;
+}
+
+
+/* layout */
+
+.trust-layout{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:40px;
+}
+
+/* título */
+
+.trust-section h2{
+    font-size:40px;
+}
+
+
+/* stats */
+
+.trust-stat{
+    padding:22px 26px;
+}
+
+.trust-stat h3{
+    font-size:26px;
+}
+
+.trust-stat p{
+    font-size:17px;
+}
+
+
+/* mapa */
+
+.trust-map{
+    flex:1 1 420px;
+}
+
+.trust-map img{
+    width:390px;
+    transform:none;  
+}
+
+
+
+/* ===========================
+   Pricing Section
+   =========================== */
+.pricing-section{
+    gap:40px;
+    padding:60px 60px;
+    margin-bottom:40px;
+}
+
+.pricing-content{
+    max-width:520px;
+}
+
+.pricing-content h2{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.pricing-content p{
+    font-size:22px;
+    line-height:1.4;
+}
+
+/* ===========================
+   CTA Section
+   =========================== */
+
+   
+   .cta-section{
+    padding:80px 60px;
+}
+
+.cta-section h2{
+    font-size:48px;
+    max-width:700px;
+}
+
+.cta-section > p{
+    font-size:24px;
+    max-width:420px;
+}
+
+.cta-section .btn-primary{
+    padding:14px 36px;
+    font-size:20px;
+}
+
+.cta-graphics{
+    /* margin-top:40px; */
+    display: none;
+    visibility: hidden;
+}
+
+.cta-graphics img{
+    height:260px;
+}
+
+.footer{
+    padding:50px 60px 24px;
+}
+
+/* grid */
+
+.footer-content{
+    grid-template-columns:180px 1fr 1fr;
+    gap:30px;
+}
+
+/* logo */
+
+/* .footer-brand img{
+    width:140px;
+    height:auto;
+} */
+
+/* social */
+
+.social-links{
+    gap:24px;
+}
+}

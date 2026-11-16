@@ -1,0 +1,113 @@
+@media (max-width: 1799px) {
+    .hero-image {
+        right: -100px;
+        width: 900px;
+    }
+    
+    .hero-title {
+        font-size: 70px;
+    }
+    
+    .stats-grid {
+        gap: 40px;
+    }
+
+    .hero-content {
+    max-width: 1200px;
+    padding: 0 111px;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 5;
+}
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-bg-light);
+    z-index: -1;
+}
+
+    .card-ai {
+    top: 558px;
+    right: 30.8vh;
+    width: 130px;
+    height: 86px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    position: absolute;
+    /* border-radius: 9999px; */
+}
+
+/* .hero-section {
+    position: relative;
+    min-height: 1200px;
+    overflow: hidden;
+    color: var(--color-text-dark);
+    background: var(--color-bg-light);
+}*/
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-bg-light);
+    z-index: -1;
+} */
+
+.floating-card {
+    position: absolute;
+    background: var(--color-white);
+    border-radius: 16px;
+    box-shadow: var(--shadow-small);
+    padding: 20px;
+    z-index: 6;
+    /* animation: float 3s ease-in-out infinite; */
+}
+
+.card-chat {
+    top: 260px;
+    right:20.9vh;
+    width: 259px;
+}
+
+.floating-channels {
+    position: absolute;
+    top: 35.3vh;
+    right: 15.9vh;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    background: var(--color-white);
+    border-radius: 18px;
+    box-shadow: var(--shadow-small);
+    z-index: 6;
+}
+
+.stat-icon {
+    height: 8rem;
+    width: 8rem;
+    /* max-width: 200px; */
+    /* object-fit: contain; */
+    margin: 0 auto 30px;
+}
+
+
+.stat-item p {
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--color-text-black);
+    line-height: 1.5;
+}
+
+}

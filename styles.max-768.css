@@ -1,0 +1,483 @@
+@media (max-width:768px){
+
+/* Mobile Info Image */
+.mobile-info-image{
+    display:block;
+    text-align:center;
+    padding:0 24px;
+}
+
+.mobile-info-image img{
+    width:100%;
+    max-width:500px;
+    height:auto;
+}
+
+/* NAVBAR */
+
+
+.navbar{
+    padding:20px 24px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:relative;
+}
+
+/* ocultar menu */
+
+.nav-links{
+    position:absolute;
+    top:100%;
+    left:0;
+
+    width:100%;
+    background:white;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+
+    padding:20px 0;
+
+    max-height:0;
+    overflow:hidden;
+
+    transition:max-height .3s ease;
+}
+
+/* abrir menu */
+.nav-links{
+    padding: 0;
+}
+
+.nav-links.active{
+    max-height:400px;
+}
+
+/* logo izquierda */
+
+.logo{
+    order:1;
+}
+
+.logo img{
+    height:55px;
+    width:auto;
+}
+
+/* botón + hamburguesa derecha */
+
+.nav-actions{
+    order:2;
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+/* botón */
+
+.btn-primary{
+    font-size:14px;
+    padding:8px 18px;
+}
+
+/* hamburguesa */
+
+.menu-toggle{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+    cursor:pointer;
+}
+
+.menu-toggle span{
+    width:25px;
+    height:3px;
+    background:#000;
+}
+
+/* HERO MOBILE */
+
+.hero-section{
+    flex-direction:column;
+    justify-content:center;
+    padding:60px 30px 40px;
+}
+
+/* ocultar imagen mujer */
+
+.hero-image{
+    display:none;
+}
+
+/* ocultar floating cards */
+
+.card-chat,
+.card-ai,
+.floating-channels,
+.card-team,
+.hero-dot,
+.hero-agent{
+    display:none;
+}
+
+/* hero texto */
+
+.hero-title{
+    padding-left:0;
+    font-size:clamp(2.2rem,8vw,3rem);
+    line-height:1.15;
+    letter-spacing:-1.5px;
+    text-decoration:none;
+}
+
+.hero-subtitle{
+    padding-left:0;
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    padding-left:0;
+    gap:14px;
+}
+
+/* hamburguesa */
+
+.menu-toggle{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+    cursor:pointer;
+}
+
+.menu-toggle span{
+    width:25px;
+    height:3px;
+    background:#000;
+    display:block;
+}
+
+
+/* ===========================
+   Problem Section
+   =========================== */
+
+   .problem-section{
+    padding:50px 24px;
+}
+
+.problem-section .section-title{
+    font-size:30px;
+}
+
+.problem-section .section-description{
+    font-size:16px;
+    margin-bottom:50px;
+}
+
+.problem-section .stats-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:40px;
+}
+
+.problem-section .stat-icon{
+    width:70px;
+}
+
+.problem-section .stat-item p{
+    font-size:15px;
+}
+
+
+.stats-grid{
+  display:flex;
+  flex-wrap:nowrap;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  scroll-snap-type:x mandatory;
+  gap:20px;
+}
+
+/* ocultar scrollbar */
+
+.stats-grid::-webkit-scrollbar{
+    display:none;
+}
+
+.stats-grid{
+    scrollbar-width:none;
+}
+
+/* items */
+
+.stat-item{
+  min-width:100%;
+  flex:0 0 100%;
+  text-align:center;
+  scroll-snap-align:start;
+}
+
+
+/* iconos */
+
+.stat-icon{
+    width:60px;
+}
+
+/* texto */
+
+.stat-item p{
+    font-size:15px;
+}
+
+
+/* contenedor del carousel */
+.stats-carousel{
+  position:relative;
+  max-width:1200px;
+  margin:auto;
+}
+
+/* flechas */
+.carousel-arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:white;
+  border:none;
+  font-size:28px;
+  cursor:pointer;
+  padding:10px 14px;
+  border-radius:50%;
+  box-shadow:0 4px 12px rgba(0,0,0,0.15);
+  z-index:2;
+}
+
+.carousel-arrow.left{
+  left:-10px;
+}
+
+.carousel-arrow.right{
+  right:-10px;
+}
+
+/* MOBILE */
+
+.stats-grid{
+  display:flex;
+  flex-wrap:nowrap;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  scroll-snap-type:x mandatory;
+  gap:20px;
+}
+
+.stat-item{
+  min-width:100%;
+  flex:0 0 100%;
+  text-align:center;
+  scroll-snap-align:start;
+}
+
+.stat-icon{
+  width:60px;
+}
+
+.carousel-arrow{
+  display:flex;
+}
+
+.carousel-arrow.left{
+  left:-10px;
+
+}
+
+.carousel-arrow.right{
+  right:-10px;
+
+}
+
+
+/* ===========================
+   Solution Sections
+   =========================== */
+
+
+
+.solution-section{
+    flex-direction:column;
+    text-align:center;
+    gap:25px;
+}
+
+/* imagen arriba */
+
+.solution-image{
+    order:1;
+}
+
+.solution-content{
+    order:2;
+    max-width:100%;
+}
+
+.solution-image img{
+    max-width:100%;
+}
+
+/* floating se ajusta */
+
+.card-channels{
+    right:10px;
+    bottom:10px;
+}
+
+.solution-chat-card{
+    width:160px;
+}
+
+.solution-channel-icons{
+    width:110px;
+}
+
+/* stats */
+
+.floating-stats{
+    right:10px;
+    bottom:10px;
+}
+
+/* ===========================
+   Products Section
+   =========================== */
+
+
+/* Ocultar stats en mobile, mostrar carrusel de cards */
+
+.stats-carousel{
+    display:none !important;
+}
+
+.products-carousel{
+    display:flex !important;
+}
+
+.products-carousel .carousel-arrow{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+
+/* CTA Graphics - visible on mobile */
+.cta-graphics{
+    display:grid !important;
+    visibility:visible !important;
+    grid-template-columns:repeat(2,1fr);
+    margin-top:30px;
+}
+
+.cta-graphics img{
+    height:auto;
+}
+
+.cta-graphics img:nth-child(n+3){
+    display:none;
+}
+
+/* sección */
+
+.products-section{
+    padding:60px 24px;
+}
+
+
+/* título */
+
+.product-section-title{
+    font-size:32px;
+}
+
+
+/* banner */
+
+.implementation-banner{
+    padding:24px 20px;
+    margin-top:40px;
+}
+
+.implementation-banner p{
+    font-size:18px;
+    line-height:1.4;
+}
+
+
+/* ===========================
+   Trust Section
+   =========================== */
+
+   /* contenedor */
+
+.trust-section{
+    padding:40px 24px;
+    margin:20px 16px;
+}
+
+
+/* layout vertical */
+
+.trust-layout{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:40px;
+}
+
+
+/* texto */
+
+.trust-left{
+    width:100%;
+}
+
+
+/* título */
+
+.trust-section h2{
+    font-size:32px;
+}
+
+
+/* stats */
+
+.trust-stats{
+    width:100%;
+    align-items:center;
+}
+
+.trust-stat{
+    width:100%;
+    max-width:420px;
+}
+
+
+/* mapa */
+
+.trust-map{
+    width:100%;
+    justify-content:center;
+}
+
+.trust-map img{
+    width:100%;
+    max-width:420px;
+    transform:none;
+}
+
+
+}
+

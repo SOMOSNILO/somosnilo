@@ -1,0 +1,301 @@
+@media (max-width:1200px){
+
+.nav-links{
+    gap:20px;
+}
+
+.nav-links a{
+    font-size:18px;
+}
+
+.hero-section{
+    padding:0 40px;
+    min-height: 500px;
+}
+
+.hero-title{
+    padding-left:60px;
+}
+
+.hero-subtitle{
+    padding-left:60px;
+}
+
+.hero-buttons{
+    padding-left:60px;
+}
+
+.hero-image img{
+    max-width:750px;
+}
+
+.card-chat{
+    top:20px;
+    right:360px;
+}
+
+ .card-ai{
+
+    top:40.5%;
+    right:28.5%;
+
+}
+
+.floating-channels{
+
+    top: 35.5%;
+    right:21.5%;
+
+}
+
+.floating-card {
+    padding: 8px;
+}
+
+.card-chat{
+	right:380px;
+    z-index: 10;
+}
+
+.card-team{
+    right:120px;
+    bottom:0;
+    transform: translateY(60px);
+    padding: 8px;
+
+}
+
+.chat-bubble{
+	padding: 12px;
+	margin-bottom: 8px;
+	font-size: 8px;
+}
+.chat-input{
+	padding: 12px;
+}
+
+.hero-dot {
+    position: absolute;
+    right: 5rem;
+    bottom: 6.5rem;
+    width: 90px;
+    height: 90px;
+    border-radius: 9999px;
+    background: var(--color-text-dark);
+    z-index: 18;
+    pointer-events: none;
+}
+
+.hero-agent {
+    position: absolute;
+    right: 5rem;
+    bottom: -0.5rem;
+    width: 90px;
+    height: 90px;
+    border-radius: 80px 80px 0 0;
+    background: var(--color-primary);
+    color: var(--color-white);
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+
+/* ===========================
+   Problem Section
+   =========================== */
+
+
+
+
+.problem-section{
+    position: relative;   
+    text-align:center;
+    background:var(--color-white);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    z-index: 1;
+}
+
+/* label */
+
+.section-label{
+    display:inline-block;
+    font-size:18px;
+    font-weight:700;
+    color:var(--color-secondary);
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:16px;
+}
+
+/* title */
+
+.section-title{
+    font-size:48px;
+    font-weight:800;
+    color:var(--color-text-dark);
+    margin-bottom:16px;
+    line-height:1.2;
+}
+
+/* description */
+
+.section-description{
+    font-size:20px;
+    line-height:1.6;
+    max-width:900px;
+    margin:0 auto 70px;
+    color:var(--color-text-black);
+}
+
+/* FLEX container */
+
+.stats-grid{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    gap:40px;
+    flex-wrap:nowrap;
+    max-width:1200px;
+    margin:0 10px;
+}
+
+/* item */
+
+.stat-item{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    max-width:280px;
+}
+
+/* icon */
+.stat-icon{
+    width:80px;
+    height:80px;
+    margin-bottom:20px;
+}
+/* text */
+
+.stat-item p{
+    font-size:18px;
+    font-weight:500;
+    line-height:1.5;
+    color:var(--color-text-black);
+}
+
+/* ===========================
+   Solution Sections
+   =========================== */
+
+
+.solution-intro{
+    padding:80px 60px;
+}
+
+.section-title-left{
+    font-size:42px;
+    max-width:560px;
+}
+
+.solution-description{
+    font-size:22px;
+    max-width:900px;
+}
+
+
+.solution-section{
+    display:flex;
+    align-items:center;
+    gap:40px;
+
+    padding:60px 60px;
+}
+
+.solution-content{
+    flex:1;
+    max-width:560px;
+}
+
+.solution-content h2{
+    font-size:40px;
+}
+
+.solution-content p{
+    font-size:20px;
+}
+
+
+/* ===========================
+   Image
+   =========================== */
+
+.solution-image img{
+    max-width:520px;
+}
+
+
+/* ===========================
+   Floating channels
+   =========================== */
+
+.card-channels{
+    bottom:15px;
+    right:15px;
+
+    gap:8px;
+}
+
+.solution-channel-icons{
+    width:140px;
+}
+
+
+/* chat */
+
+.solution-chat-card{
+    width:200px;
+}
+
+
+/* ===========================
+   Floating stats
+   =========================== */
+
+.floating-stats{
+    bottom:15px;
+    right:15px;
+}
+
+.floating-stat{
+    padding:10px 12px;
+}
+
+.floating-stat-icon{
+    width:40px;
+    height:40px;
+}
+
+.countries-flags img{
+    width:24px;
+    height:24px;
+}
+/* ===========================
+   Trust Section
+   =========================== */
+
+
+.trust-layout{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:40px;
+}
+
+
+}
