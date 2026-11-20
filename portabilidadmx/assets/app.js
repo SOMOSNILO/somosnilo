@@ -216,8 +216,9 @@
   function abrirChat(origen) {
     track('chat_open', { plan: plan.nombre, cta_id: origen || '', canal: CANAL });
     conversion('conversionChat', { value: 1, currency: 'MXN' });
-    /* Meta: evento estándar (optimizable en campañas) + uno propio para
-       distinguir el clic al WhatsApp de otros contactos en el Administrador de eventos. */
+    /* Meta: el evento estándar 'Contact' de WhatsApp va en el onclick del botón
+       (index.html), para que se vea en el HTML. Aquí solo se envía el evento propio
+       con el plan y precio, y Contact únicamente si el canal es Vambe. */
     var metaParams = {
       content_name: plan.nombre,
       content_ids: [plan.id],
@@ -227,8 +228,8 @@
       canal: CANAL,
       cta: origen || ''
     };
-    metaEvent(META.eventoChat || 'Contact', metaParams);
-    if (CANAL === 'whatsapp') metaCustom(META.eventoWhatsapp || 'ClickWhatsApp', metaParams);
+    if (CANAL !== 'whatsapp') metaEvent(META.eventoChat || 'Contact', metaParams);
+    else metaCustom(META.eventoWhatsapp || 'ClickWhatsApp', metaParams);
 
     if (CANAL === 'whatsapp') {
       // El <a> ya navega a WhatsApp con el mensaje (ver actualizarWa); aquí solo medimos.

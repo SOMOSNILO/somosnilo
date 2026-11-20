@@ -36,7 +36,7 @@ window.LP_CONFIG = {
   /* ── Meta pixel ────────────────────────────────────────
      pixelId vacío = no se carga nada de Meta.
      Al hacer clic en el botón de WhatsApp se envían DOS eventos:
-       · eventoChat     (estándar 'Contact') → úsalo para optimizar la campaña
+       · 'Contact' (estándar) → va en el onclick del botón en index.html; úsalo para optimizar
        · eventoWhatsapp (personalizado)      → para filtrar/reportar el clic
      Ambos llevan: content_name (plan), value (precio) y currency MXN. */
   /* El pixel se instala en el <head> de index.html (PageView). Este ID
