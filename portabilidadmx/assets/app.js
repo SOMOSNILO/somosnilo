@@ -50,7 +50,7 @@
     if (themeMeta) themeMeta.setAttribute('content', p.tema === 'dark' ? '#0f2a3d' : '#ece6dd');
 
     F.deseo.textContent  = p.deseo;
-    F.nombre.textContent = p.nombre;
+    F.nombre.textContent = p.nombre + '.';
     F.antes.textContent  = '$' + p.antes + '/mes';
     F.precio.textContent = p.precio;
     F.meses.textContent  = mesesTxt(p.meses);
@@ -85,7 +85,7 @@
   var picker = $('#picker');
   picker.innerHTML = PLANES.map(function (p) {
     return '<button type="button" class="pk" role="tab" data-id="' + esc(p.id) + '" style="--c:' + esc(p.color) + '">' +
-             '<span><span class="pk__name"><span class="pk__dot"></span>' + esc(p.nombre.replace('Plan ', '')) + '</span>' +
+             '<span><span class="pk__name"><span class="pk__dot"></span>' + esc(p.nombre.replace('Plan ', '') + '.') + '</span>' +
              '<span class="pk__tag">' + esc(tagDe(p)) + '</span></span>' +
              '<span class="pk__price">$' + p.precio + '<small>/mes</small></span>' +
            '</button>';
