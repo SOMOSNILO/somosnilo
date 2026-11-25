@@ -37,7 +37,7 @@ fbq('track', 'PageView');
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="dns-prefetch" href="https://api.whatsapp.com">
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700;800;900&family=Gochi+Hand&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/campaign.css?v=6">
+<link rel="stylesheet" href="assets/campaign.css?v=7">
 
 <!-- Google Ads / GA4: descomenta y pon tus IDs reales
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
@@ -71,8 +71,6 @@ fbq('track', 'PageView');
       <i style="--x:95%;--d:14s;--t:-2s;--s:5px"></i>
     </div>
 
-    <!-- Adornos del plan elegido (bota, regalo, campana, árbol…); los pinta app.js -->
-    <div class="adornos" id="adornos"></div>
   </div>
 
   <header class="top">
@@ -84,6 +82,8 @@ fbq('track', 'PageView');
   </header>
 
   <main class="main">
+    <!-- Adornos del plan elegido (bota, regalo, campana, árbol…); los pinta app.js -->
+    <div class="adornos" id="adornos" aria-hidden="true"></div>
     <section class="offer" id="offer" aria-live="polite">
       <p class="offer__deseo" data-f="deseo">¿GB ilimitados y a mitad de precio? Deseo cumplido</p>
       <span class="offer__pill" data-f="pill">
@@ -143,6 +143,6 @@ fbq('track', 'PageView');
 </div>
 
 <script src="assets/config.js?v=7"></script>
-<script src="assets/app.js?v=8"></script>
+<script src="assets/app.js?v=9"></script>
 </body>
 </html>
