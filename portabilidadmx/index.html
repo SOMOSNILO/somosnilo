@@ -37,7 +37,7 @@ fbq('track', 'PageView');
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="dns-prefetch" href="https://api.whatsapp.com">
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700;800;900&family=Gochi+Hand&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/campaign.css?v=5">
+<link rel="stylesheet" href="assets/campaign.css?v=6">
 
 <!-- Google Ads / GA4: descomenta y pon tus IDs reales
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
@@ -71,30 +71,8 @@ fbq('track', 'PageView');
       <i style="--x:95%;--d:14s;--t:-2s;--s:5px"></i>
     </div>
 
-    <!-- Esfera colgando del listón -->
-    <svg class="doodle doodle--ball" viewBox="0 0 60 90" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M30 2 V22" stroke="var(--ribbon)" stroke-width="2.5"/>
-      <rect x="23" y="22" width="14" height="9" rx="2" stroke="currentColor" stroke-width="2.5"/>
-      <circle cx="30" cy="56" r="25" stroke="var(--plan)" stroke-width="3.5"/>
-      <path d="M8 50 C 16 44, 22 58, 30 50 S 44 44, 52 52" stroke="var(--plan)" stroke-width="3"/>
-      <path d="M9 62 C 17 56, 23 70, 31 62 S 45 56, 51 63" stroke="var(--plan)" stroke-width="3"/>
-    </svg>
-
-    <!-- Destello -->
-    <svg class="doodle doodle--spark" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round">
-      <path d="M20 3 C 22 14, 26 18, 37 20 C 26 22, 22 26, 20 37 C 18 26, 14 22, 3 20 C 14 18, 18 14, 20 3 Z"/>
-    </svg>
-
-    <!-- Copo garabateado -->
-    <svg class="doodle doodle--flake" viewBox="0 0 40 40" fill="none" stroke="var(--cta)" stroke-width="2.6" stroke-linecap="round">
-      <path d="M20 3 V37 M5 11 L35 29 M5 29 L35 11"/>
-      <path d="M16 6 L20 10 L24 6 M16 34 L20 30 L24 34"/>
-    </svg>
-
-    <!-- Estrella pequeña -->
-    <svg class="doodle doodle--star" viewBox="0 0 40 40" fill="none" stroke="var(--cta)" stroke-width="2.6" stroke-linejoin="round">
-      <path d="M20 4 L24 15 L36 15 L26 22 L30 34 L20 27 L10 34 L14 22 L4 15 L16 15 Z"/>
-    </svg>
+    <!-- Adornos del plan elegido (bota, regalo, campana, árbol…); los pinta app.js -->
+    <div class="adornos" id="adornos"></div>
   </div>
 
   <header class="top">
@@ -110,7 +88,7 @@ fbq('track', 'PageView');
       <p class="offer__deseo" data-f="deseo">¿GB ilimitados y a mitad de precio? Deseo cumplido</p>
       <span class="offer__pill" data-f="pill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
-        <span data-f="nombre">Plan Pro 20.</span>
+        <span data-f="nombre">Plan Pro 20</span>
       </span>
 
       <div class="offer__nums">
@@ -126,6 +104,12 @@ fbq('track', 'PageView');
         </div>
       </div>
 
+      <!-- Sello destacado de YouTube (planes con YouTube Premium) -->
+      <div class="yt" data-f="video" hidden>
+        <svg class="yt__logo" viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="5" fill="#ff0000"/><path d="M11 5.5v9l8-4.5z" fill="#fff"/></svg>
+        <span class="yt__txt"><b data-f="videoTitulo">YouTube Premium</b><span data-f="videoDetalle">3 meses sin costo*</span></span>
+      </div>
+
       <ul class="offer__extras" data-f="extras"></ul>
 
       <!-- Conversión de Meta: el onclick dispara 'Contact' (evento que optimiza la campaña).
@@ -138,6 +122,9 @@ fbq('track', 'PageView');
         <span>¡Cámbiate por WhatsApp!</span>
       </a>
       <p class="offer__micro">Conserva tu número o pide tu línea nueva</p>
+      <!-- Legal propio del plan elegido: siempre a la vista -->
+      <p class="offer__legal"><span data-f="legal">Del 13 de noviembre al 24 de diciembre de 2026. *Para nuevos suscriptores de YouTube Premium.</span>
+        Consulta detalles en <a href="https://www.movistar.com.mx/tyc/planes" target="_blank" rel="noopener">movistar.com.mx/tyc/planes</a></p>
     </section>
 
     <nav class="picker" aria-label="Elige tu plan">
@@ -147,8 +134,7 @@ fbq('track', 'PageView');
   </main>
 
   <footer class="legal">
-    <p><span data-f="legal">Del 13 de noviembre al 24 de diciembre de 2026.</span>
-      Precio promocional por los meses indicados; después aplica la renta regular. Precios en MXN con IVA incluido. Sujeto a los términos de Pegaso PCS, S.A. de C.V. (Movistar):
+    <p>Precio promocional por los meses indicados; después aplica la renta regular. Precios en MXN con IVA incluido. Sujeto a los términos de Pegaso PCS, S.A. de C.V. (Movistar):
       <a href="https://www.movistar.com.mx/tyc/planes" target="_blank" rel="noopener">movistar.com.mx/tyc/planes</a>.
       Sitio de un distribuidor autorizado; no es el sitio oficial de Movistar.
       <a href="aviso-privacidad.html">Aviso de privacidad</a>
@@ -156,7 +142,7 @@ fbq('track', 'PageView');
   </footer>
 </div>
 
-<script src="assets/config.js?v=6"></script>
-<script src="assets/app.js?v=7"></script>
+<script src="assets/config.js?v=7"></script>
+<script src="assets/app.js?v=8"></script>
 </body>
 </html>
