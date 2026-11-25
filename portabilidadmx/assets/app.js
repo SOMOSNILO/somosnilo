@@ -144,7 +144,8 @@
   render(plan);
   var sel = $('.pk[aria-selected="true"]');
   if (sel && picker.scrollWidth > picker.clientWidth) {
-    picker.scrollLeft = sel.offsetLeft - (picker.clientWidth - sel.offsetWidth) / 2;
+    var rs = sel.getBoundingClientRect(), rp = picker.getBoundingClientRect();
+    picker.scrollLeft += (rs.left + rs.width / 2) - (rp.left + rp.width / 2);
   }
 
   /* ─────────────── 4. Atribución + tracking ─────────────── */

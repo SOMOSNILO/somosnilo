@@ -232,72 +232,103 @@ body[data-tema="dark"] .snow i{ background:rgba(255,255,255,.55); }
   50% { transform:translate3d(14px,52vh,0); }
   100%{ transform:translate3d(-6px,104vh,0); }
 }
+/* Adornos: dentro de .main, detrás de la oferta y el selector */
+.adornos{ position:absolute; inset:0; pointer-events:none; z-index:0; }
+.main > .offer, .main > .picker{ position:relative; z-index:1; }
 .adorno{
   position:absolute; width:clamp(56px,13vh,116px); height:auto;
   color:var(--plan); opacity:.95; transition:color .3s;
   animation:sway 5s ease-in-out infinite;
 }
-.adorno--tl{ left:4%;  top:12%; }
-.adorno--tr{ right:calc(260px + 7%); top:9%; animation-delay:-1.2s; }
-.adorno--bl{ left:3%;  bottom:12%; animation-delay:-2.4s; }
-.adorno--br{ right:calc(260px + 6%); bottom:10%; animation-delay:-3.6s; }
+.adorno--tl{ left:1%;  top:7%; }
+.adorno--tr{ right:calc(260px + 4%); top:5%; animation-delay:-1.2s; }
+.adorno--bl{ left:1%;  bottom:11%; animation-delay:-2.4s; }
+.adorno--br{ right:calc(260px + 3%); bottom:9%; animation-delay:-3.6s; }
 .adorno--destello, .adorno--copo{ width:clamp(30px,6.5vh,56px); }
 .adorno--esfera, .adorno--campana{ transform-origin:50% 0; animation-name:swing; }
 body[data-tema="dark"] .adorno{ opacity:1; }
 @keyframes sway{ 0%,100%{ transform:rotate(-4deg); } 50%{ transform:rotate(4deg); } }
 @keyframes swing{ 0%,100%{ transform:rotate(-6deg); } 50%{ transform:rotate(6deg); } }
-
-@media (max-width:820px){
-  .adorno{ width:clamp(34px,7vh,52px); opacity:.6; }
-  .adorno--tl, .adorno--tr{ display:none; }   /* arriba va el selector de planes */
-  .adorno--bl{ left:2%; bottom:15%; }
-  .adorno--br{ right:2%; bottom:15%; }
-  .adorno--destello, .adorno--copo{ width:24px; }
-  .snow i:nth-child(even){ display:none; }
-}
 @media (prefers-reduced-motion:reduce){ .snow{ display:none; } }
 
-/* ════════ Móvil / pantallas estrechas ════════ */
+/* ════════ Móvil / pantallas estrechas ════════
+   En móvil la página fluye (puede hacer scroll en pantallas bajas) en vez de
+   forzar una sola pantalla: así nada se encima ni se corta.
+   Escala de espacios: 4 · 8 · 12 · 16 · 24 px. */
 @media (max-width:820px){
-  .stage{ padding-inline:16px; }
-  .main{
-    grid-template-columns:1fr; grid-template-rows:auto minmax(0,1fr);
-    align-items:stretch; gap:clamp(.4rem,1.4vh,.9rem); padding-inline:4px;
+  body{ overflow-x:hidden; overflow-y:auto; }
+  .stage{
+    height:auto; min-height:100vh; min-height:100dvh;
+    grid-template-columns:minmax(0,1fr); grid-template-rows:auto 1fr auto; row-gap:12px;
+    padding:8px 16px calc(12px + env(safe-area-inset-bottom));
   }
-  .picker{ order:-1; }
-  .picker__t{ display:none; }
-  /* Fila horizontal deslizable: el scroll es del selector, no de la página */
+  /* El marco a mano no escala bien en vertical: en móvil el marco es el borde de la tarjeta */
+  .frame{ display:none; }
+
+  /* Cabecera: logo a la izquierda, sello de distribuidor a la derecha */
+  .top{ justify-content:flex-start; align-items:center; min-height:36px; }
+  .top__m{ height:30px; }
+  .top__dist{
+    top:50%; transform:translateY(-50%); font-size:.6875rem; max-width:64%;
+    flex-wrap:wrap; justify-content:flex-end; column-gap:4px; row-gap:0;
+  }
+
+  /* Tarjeta con el marco azul de la campaña */
+  .main{
+    position:relative; grid-template-columns:minmax(0,1fr); grid-template-rows:auto 1fr;
+    align-items:stretch; gap:16px; padding:12px 12px 24px;
+    border:3px solid var(--ribbon); border-radius:24px;
+  }
+  .picker, .offer{ min-width:0; }
+
+  /* Selector: título visible y fila deslizable que no toca el borde */
+  .picker{ order:-1; gap:8px; }
+  .picker__t{ display:block; margin:0 0 0 4px; font-size:1.1rem; text-align:left; line-height:1; }
   .picker__list{
-    flex-direction:row; overflow-x:auto; scroll-snap-type:x mandatory;
-    gap:.4rem; padding:.15rem .1rem .35rem; margin-inline:-4px;
+    flex-direction:row; overflow-x:auto; scroll-snap-type:x proximity;
+    gap:8px; margin-inline:-12px; padding:2px 12px 4px; scroll-padding-inline:12px;
     scrollbar-width:none;
+    /* Desvanecido en los bordes: indica que hay más planes al deslizar */
+    -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 12px, #000 calc(100% - 28px), transparent 100%);
+            mask-image:linear-gradient(90deg, transparent 0, #000 12px, #000 calc(100% - 28px), transparent 100%);
   }
   .picker__list::-webkit-scrollbar{ display:none; }
-  .pk{ flex:none; scroll-snap-align:start; flex-direction:column; align-items:flex-start; gap:.05rem; padding:.35rem .7rem; border-radius:12px; }
-  .pk__name{ font-size:.8rem; }
-  .pk__price{ font-size:.85rem; margin-left:1.05rem; }
+  .pk{
+    flex:none; scroll-snap-align:start; flex-direction:column; align-items:flex-start;
+    gap:2px; min-height:48px; padding:8px 12px; border-radius:12px;
+  }
+  .pk__name{ font-size:.8125rem; }
+  .pk__price{ font-size:.875rem; margin-left:1.05rem; }
   .pk__tag{ display:none; }
 
-  .stage{ grid-template-columns:minmax(0,1fr); }
-  /* En móvil el logo queda a la izquierda y el sello a la derecha, en la misma fila */
-  .top{ justify-content:flex-start; align-items:center; min-height:clamp(26px,5vh,40px); }
-  .top__dist{ top:50%; transform:translateY(-50%); font-size:.66rem; max-width:62%; flex-wrap:wrap; justify-content:flex-end; column-gap:.3rem; row-gap:0; }
-  .main{ grid-template-columns:minmax(0,1fr); }
-  .picker, .offer{ min-width:0; }
-  .offer{ justify-content:center; }
-  .offer__deseo{ font-size:clamp(1.35rem,min(4.4vh,6.6vw),2.2rem); }
-  .offer__nums{ gap:.9rem; }
-  .gb__val{ font-size:clamp(2rem,min(8.5vh,13vw),4.2rem); }
-  .price__big{ font-size:clamp(2.6rem,min(10vh,17vw),5rem); }
-  .cta{ width:100%; min-width:0; white-space:nowrap; padding-inline:1em; font-size:clamp(1.05rem,5.2vw,1.4rem); }
+  /* Oferta: centrada en el espacio que queda, con separación pareja */
+  .offer{ justify-content:center; gap:12px; }
+  .offer__deseo{ font-size:clamp(1.35rem,6.6vw,2rem); }
+  .offer__nums{ gap:16px; }
+  .gb__val{ font-size:clamp(2.4rem,13vw,4rem); }
+  .price__big{ font-size:clamp(2.8rem,16vw,4.6rem); }
+  .cta{
+    width:100%; min-width:0; min-height:52px; white-space:nowrap;
+    padding:.6em 1em; font-size:clamp(1.05rem,5.2vw,1.35rem); margin-top:4px;
+  }
+  .offer__micro{ font-size:.8125rem; }
+  .offer__legal{ font-size:.75rem; line-height:1.45; padding-inline:8px; }
+
+  /* Legal general: fuera de la tarjeta, legible */
+  .legal{ padding:8px 8px 0; }
+  .legal p{ font-size:.6875rem; line-height:1.5; }
+
+  /* Adornos: dos "stickers" colgando de las esquinas inferiores del marco */
+  .adorno{ width:44px; opacity:1; }
+  .adorno--tl, .adorno--tr{ display:none; }
+  .adorno--bl{ left:-12px; bottom:-22px; }
+  .adorno--br{ right:-12px; bottom:-22px; left:auto; }
+  .adorno--destello, .adorno--copo{ width:28px; bottom:-14px; }
+  .snow i:nth-child(even){ display:none; }
 }
-/* Pantallas muy bajas (iPhone SE, navegadores in-app con barras) */
-@media (max-height:640px){
+/* Pantallas bajas en escritorio: oculta la línea secundaria */
+@media (min-width:821px) and (max-height:640px){
   .offer__micro{ display:none; }
-}
-/* Móvil bajo: los adornos quedan detrás del legal; se atenúan para no restarle lectura */
-@media (max-width:820px) and (max-height:700px){
-  .adorno{ opacity:.3; }
 }
 
 @media (prefers-reduced-motion:reduce){
